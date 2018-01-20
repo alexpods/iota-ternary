@@ -1,7 +1,7 @@
 {
   "name": "iota-converter",
   "version": "0.0.0",
-  "description": "Converts differet types of data in IOTA",
+  "description": "Converts between trytes, trits and bytes",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -30,6 +30,7 @@
   "dependencies": {
     "@types/chai": "^4.1.1",
     "@types/mocha": "^2.2.46",
+    "@types/node": "^9.3.0",
     "chai": "^4.1.2",
     "mocha": "^5.0.0",
     "ts-node": "^4.1.0",
