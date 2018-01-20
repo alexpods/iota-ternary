@@ -1,8 +1,9 @@
 export function numberToTrits(number: number): number[] {
-  var i, j, remainder, trits, value
+  var i, j, remainder, negative, trits, value
 
-  trits = new Array()
-  value = number < 0 ? -number : number
+  trits    = new Array()
+  negative = number < 0
+  value    = negative ? -number : number
 
   while (value > 0) {
     remainder = value % 3
@@ -13,13 +14,7 @@ export function numberToTrits(number: number): number[] {
       value += 1
     }
 
-    trits.push(remainder)
-  }
-
-  if (number < 0) {
-    for (j = 0; j < trits.length; j++) {
-      trits[j] = trits[j] === 0 ? 0 : -trits[j]
-    }
+    trits.push(negative ? -remainder : remainder)
   }
 
   return trits
