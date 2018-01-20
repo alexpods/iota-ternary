@@ -3,7 +3,6 @@ import { expect } from 'chai'
 import { numberToBytes } from '../src/number-to-bytes'
 import { bytesToNumber } from '../src/bytes-to-number'
 
-import { TRYTES } from '../src/constants'
 import { generateNumber } from './utils'
 
 describe("numberToBytes(bytes)", () => {

@@ -7,14 +7,10 @@ import { TRITS, NUMBERS_TO_TRYTES } from '../src/constants'
 import { generateTrytes } from './utils'
 
 describe("trytesToTrits(trytes)", () => {
-  let trytes: string
-
-  beforeEach(() => {
-    trytes = generateTrytes()
-  })
 
   it("should convert trytes to trits", () => {
-    const trits = trytesToTrits(trytes)
+    const trytes = generateTrytes()
+    const trits  = trytesToTrits(trytes)
 
     expect(trits).to.be.a("array")
     expect(trits.length).to.equal(trytes.length * 3)
@@ -32,6 +28,7 @@ describe("trytesToTrits(trytes)", () => {
   })
 
   it("should be possible to convert trytes back to trits", () => {
+    const trytes  = generateTrytes()
     const trits   = trytesToTrits(trytes)
     const trytes2 = tritsToTrytes(trits)
 

@@ -7,13 +7,9 @@ import { TRYTES } from '../src/constants'
 import { generateBytes } from './utils'
 
 describe("bytesToTryts(bytes)", () => {
-  let bytes: Buffer
-
-  beforeEach(() => {
-    bytes = generateBytes(10)
-  })
 
   it("should convert bytes to trytes", () => {
+    const bytes  = generateBytes(10)
     const trytes = bytesToTrytes(bytes)
 
     expect(trytes).to.be.a("string")
@@ -26,6 +22,7 @@ describe("bytesToTryts(bytes)", () => {
   })
 
   it("should be possible to convert trytes back to bytes", () => {
+    const bytes  = generateBytes(10)
     const trytes  = bytesToTrytes(bytes)
     const bytes2 = trytesToBytes(trytes)
 

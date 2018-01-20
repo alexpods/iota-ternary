@@ -1,24 +1,24 @@
 import { expect } from 'chai'
+
 import { bytesToNumber } from '../src/bytes-to-number'
+import { numberToBytes } from '../src/number-to-bytes'
+
 import { generateBytes } from './utils'
 
 describe("bytesToNumber(bytes)", () => {
-  let bytes: Buffer
-
-  beforeEach(() => {
-    bytes = generateBytes(5)
-  })
 
   it("should convert trytes to a number", () => {
+    const bytes  = generateBytes(5)
     const number = bytesToNumber(bytes)
 
     expect(number).to.be.a("number")
   })
 
-  // it("should be possible to convert trits back to trytes", () => {
-  //   const trytes = tritsToTrytes(trits)
-  //   const trits2 = trytesToTrits(trytes)
+  it("should be possible to convert number back to bytes", () => {
+    const bytes  = generateBytes(5)
+    const number = bytesToNumber(bytes)
+    const bytes2 = numberToBytes(number)
 
-  //   expect(trits2).to.deep.equal(trits)
-  // })
+    expect(bytes2.slice(0, bytes.length).equals(bytes)).to.be.true
+  })
 })

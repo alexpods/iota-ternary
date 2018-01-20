@@ -1,20 +1,21 @@
 export function numberToTrits(number: number): number[] {
-  var i, j, remainder, negative, trits, value
+  var i, j, r, n, v
 
-  trits    = new Array()
-  negative = number < 0
-  value    = negative ? -number : number
+  const trits = new Array()
 
-  while (value > 0) {
-    remainder = value % 3
-    value = Math.floor(value / 3)
+  n = number < 0
+  v = n ? -number : number
 
-    if (remainder === 2) {
-      remainder = -1
-      value += 1
+  while (v > 0) {
+    r = v % 3
+    v = Math.floor(v / 3)
+
+    if (r === 2) {
+      r = -1
+      v += 1
     }
 
-    trits.push(negative ? -remainder : remainder)
+    trits.push(n ? r && -r : r)
   }
 
   return trits

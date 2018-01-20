@@ -7,13 +7,9 @@ import { BYTES_TO_TRITS } from '../src/constants'
 import { generateTrits } from './utils'
 
 describe("tritsToBytes(trits)", () => {
-  let trits: number[]
-
-  beforeEach(() => {
-    trits = generateTrits(10)
-  })
 
   it("should convert trits to bytes", () => {
+    const trits = generateTrits(10)
     const bytes = tritsToBytes(trits)
 
     expect(bytes).to.be.an.instanceOf(Buffer)
@@ -25,6 +21,7 @@ describe("tritsToBytes(trits)", () => {
   })
 
   it("should be possible to convert bytes back to trits", () => {
+    const trits  = generateTrits(10)
     const bytes  = tritsToBytes(trits)
     const trits2 = bytesToTrits(bytes)
 
