@@ -1,5 +1,4 @@
 export {
-  NUMBERS_TO_TRYTES,
   TRYTES,
   TRITS,
   TRYTES_TO_NUMBERS,
