@@ -1,1 +1,1 @@
-export { bytesToTrits } from './version-3'
+export { bytesToTrits } from "./version-3"
