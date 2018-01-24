@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepublish": "npm run build",
+    "prepare": "npm run build",
     "build": "tsc --project tsconfig.json",
     "test": "mocha test/**/*.spec.ts --require ts-node/register",
     "test:watch": "npm run test -- --watch --watch-extensions=ts",
