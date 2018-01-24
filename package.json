@@ -1,7 +1,7 @@
 {
-  "name": "iota-converter",
-  "version": "0.1.4",
-  "description": "Converts between trytes, trits and bytes",
+  "name": "iota-ternary",
+  "version": "0.1.5",
+  "description": "Fast utility functions for conversion between trytes, trits and bytes",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -12,21 +12,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alexpods/iota-converter.git"
+    "url": "git+https://github.com/alexpods/iota-ternary.git"
   },
   "keywords": [
     "iota",
     "ternary",
     "trits",
     "trytes",
-    "converter"
+    "conversion"
   ],
   "author": "alexpods <alexey.podskrebyshev@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/alexpods/iota-converter/issues"
+    "url": "https://github.com/alexpods/iota-ternary/issues"
   },
-  "homepage": "https://github.com/alexpods/iota-converter#readme",
+  "homepage": "https://github.com/alexpods/iota-ternary#readme",
   "devDependencies": {
     "@types/chai": "^4.1.1",
     "@types/mocha": "^2.2.46",
