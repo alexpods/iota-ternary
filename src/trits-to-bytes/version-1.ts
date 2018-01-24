@@ -1,9 +1,7 @@
-import { NUMBER_OF_TRITS_IN_A_BYTE } from './constants'
-
 export function tritsToBytes(trits: number[]): Buffer {
   var i, j, value
 
-  const size = Math.ceil(trits.length / NUMBER_OF_TRITS_IN_A_BYTE)
+  const size = Math.ceil(trits.length / 5)
   const bytes: Buffer = Buffer.alloc(size)
 
   for (i = 0, value = 0; i < size; ++i) {

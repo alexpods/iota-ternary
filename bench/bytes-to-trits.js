@@ -29,9 +29,9 @@ suite.on("start", () => {
   }
 
   for (let j = 0; j < 10000; ++j) {
-    bytesToTrits3(buffers[j % BUFFER_COUNT])
     bytesToTrits1(buffers[j % BUFFER_COUNT])
     bytesToTrits2(buffers[j % BUFFER_COUNT])
+    bytesToTrits3(buffers[j % BUFFER_COUNT])
   }
 })
 

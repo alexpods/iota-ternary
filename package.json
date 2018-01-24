@@ -9,7 +9,8 @@
     "build": "tsc --project tsconfig.json",
     "test": "mocha test/**/*.spec.ts --require ts-node/register",
     "test:watch": "npm run test -- --watch --watch-extensions=ts",
-    "bench:bytes-to-trits": "node bench/bytes-to-trits"
+    "bench:bytes-to-trits": "node bench/bytes-to-trits",
+    "bench:trits-to-bytes": "node bench/trits-to-bytes"
   },
   "repository": {
     "type": "git",
