@@ -3,7 +3,6 @@ export {
   TRYTES,
   TRITS,
   TRYTES_TO_NUMBERS,
-  TRYTES_TO_TRITS,
 } from "./constants"
 
 export { trytesToTrits  } from "./trytes-to-trits"

@@ -10,6 +10,7 @@
     "test": "mocha test/**/*.spec.ts --require ts-node/register",
     "test:watch": "npm run test -- --watch --watch-extensions=ts",
     "bench:bytes-to-trits": "node bench/bytes-to-trits",
+    "bench:trytes-to-trits": "node bench/trytes-to-trits",
     "bench:trits-to-bytes": "node bench/trits-to-bytes"
   },
   "repository": {
@@ -35,6 +36,7 @@
     "@types/node": "^9.3.0",
     "benchmark": "^2.1.4",
     "chai": "^4.1.2",
+    "iota.lib.js": "^0.4.6",
     "mocha": "^5.0.0",
     "ts-node": "^4.1.0",
     "typescript": "^2.6.2"

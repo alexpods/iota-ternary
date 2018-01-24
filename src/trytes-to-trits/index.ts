@@ -1,0 +1,1 @@
+export { trytesToTrits } from './version-5'

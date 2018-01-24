@@ -9,10 +9,10 @@ const TRITS = [-1, 0, 1]
 const TRITS_SIZE  = 8250
 const TIRTS_COUNT = 20
 
-function generateTrits(count = 273) {
-  const trits = new Array(count)
+function generateTrits(size) {
+  const trits = new Array(size)
 
-  for (let i = 0; i < count; ++i) {
+  for (let i = 0; i < size; ++i) {
     trits[i] = TRITS[Math.floor(Math.random()*3)]
   }
 
@@ -47,10 +47,6 @@ suite.on('complete', function () {
   console.log(this[1].toString())
 
   console.log('Fastest is ' + this.filter('fastest').map('name'));
-})
-
-suite.on("error", (...args) => {
-  console.log(args)
 })
 
 suite.run();
