@@ -42,7 +42,7 @@ suite.on("start", () => {
   }
 })
 
-suite.add("iota.lib.js", () => {
+suite.add("iota.lib.js: trits()", () => {
   const trits = iotaLibTrits(trytes[++i % TRYTES_COUNT])
 })
 
