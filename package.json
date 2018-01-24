@@ -1,11 +1,11 @@
 {
   "name": "iota-ternary",
-  "version": "0.2.2",
+  "version": "0.2.1",
   "description": "Fast utility functions for conversion between trytes, trits and bytes",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "prepare": "npm run build",
+    "preparen": "npm run build",
     "build": "tsc --project tsconfig.json",
     "test": "mocha test/**/*.spec.ts --require ts-node/register",
     "test:watch": "npm run test -- --watch --watch-extensions=ts",

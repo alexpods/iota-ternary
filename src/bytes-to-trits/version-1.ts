@@ -15,7 +15,7 @@ bytesToTritsLoop: for (let i = 0, trits = [0, 0, 0, 0, 0]; i < 243; ++i) {
 }
 
 export function bytesToTrits(bytes: Buffer): number[] {
-  var i, j, v, tryteTrits
+  var i, j, v, byteTreits
 
   const size  = bytes.byteLength
   const trits = new Array(size * 5)
@@ -23,17 +23,17 @@ export function bytesToTrits(bytes: Buffer): number[] {
   for (i = 0; i < size; ++i) {
     var val = bytes.readInt8(i)
 
-    tryteTrits = BYTES_TO_TRITS[val]
+    byteTreits = BYTES_TO_TRITS[val]
 
-    if (!tryteTrits) {
+    if (!byteTreits) {
       throw new Error(`Incorrect byte ${bytes.readInt8(i)}!`)
     }
 
-    trits[i*5 + 0] = tryteTrits[0]
-    trits[i*5 + 1] = tryteTrits[1]
-    trits[i*5 + 2] = tryteTrits[2]
-    trits[i*5 + 3] = tryteTrits[3]
-    trits[i*5 + 4] = tryteTrits[4]
+    trits[i*5 + 0] = byteTreits[0]
+    trits[i*5 + 1] = byteTreits[1]
+    trits[i*5 + 2] = byteTreits[2]
+    trits[i*5 + 3] = byteTreits[3]
+    trits[i*5 + 4] = byteTreits[4]
   }
 
   return trits
