@@ -1,0 +1,1 @@
+export { bytesToTrits } from './version-3'

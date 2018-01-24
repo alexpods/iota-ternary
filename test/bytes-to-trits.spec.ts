@@ -1,9 +1,9 @@
 import { expect } from 'chai'
 
-import { bytesToTrits } from '../src/bytes-to-trits'
+import { bytesToTrits } from "../src/bytes-to-trits"
 import { tritsToBytes } from '../src/trits-to-bytes'
 
-import { TRITS, BYTES_TO_TRITS } from '../src/constants'
+import { TRITS } from '../src/constants'
 import { generateBytes } from './utils'
 
 describe("bytesToTrits(bytes)", () => {

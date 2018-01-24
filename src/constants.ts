@@ -92,20 +92,3 @@ export const TRYTES_TO_TRITS = {
   "Y": [ 1, -1,  0],
   "Z": [-1,  0,  0]
 }
-
-export const BYTES_TO_TRITS = {}
-
-
-bytesToTritsLoop: for (let i = 0, trits = [0, 0, 0, 0, 0]; i < 243; ++i) {
-  let index = i <= 121 ? i : i - 243
-
-  BYTES_TO_TRITS[index] = trits.slice()
-
-  for (let j = 0; j < 5; ++j) {
-    if (++trits[j] > 1) {
-      trits[j] = -1
-    } else {
-      continue bytesToTritsLoop
-    }
-  }
-}
