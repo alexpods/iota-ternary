@@ -1,4 +1,6 @@
-export function numberToTrits(number: number): number[] {
+import { trit } from "../types"
+
+export function numberToTrits(number: number): trit[] {
   var i, r, n, v
 
   const trits = new Array()

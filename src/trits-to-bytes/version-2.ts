@@ -1,4 +1,6 @@
-export function tritsToBytes(trits: number[]): Buffer {
+import { trit } from "../types"
+
+export function tritsToBytes(trits: trit[]): Buffer {
   const size = Math.ceil(trits.length / 5)
   const bytes: Buffer = Buffer.alloc(size)
 

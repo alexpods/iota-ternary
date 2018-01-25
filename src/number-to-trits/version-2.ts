@@ -1,4 +1,6 @@
-export function numberToTrits(number: number): number[] {
+import { trit } from "../types"
+
+export function numberToTrits(number: number): trit[] {
   if (number < 0) {
     return convertNegativeValue(-number)
   } else {
@@ -7,7 +9,7 @@ export function numberToTrits(number: number): number[] {
 }
 
 
-function convertNegativeValue(v: number): number[] {
+function convertNegativeValue(v: number): trit[] {
   const trits = []
 
   while (v) {
@@ -26,7 +28,7 @@ function convertNegativeValue(v: number): number[] {
   return trits
 }
 
-function convertPositiveValue(v: number): number[] {
+function convertPositiveValue(v: number): trit[] {
   const trits = []
 
   while (v) {

@@ -1,6 +1,8 @@
+import { trit } from "../types"
+
 const TRYTES = "NOPQRSTUVWXYZ9ABCDEFGHIJKLM"
 
-export function tritsToTrytes(trits: number[]): string {
+export function tritsToTrytes(trits: trit[]): string {
   const size   = Math.ceil(trits.length / 3)
 
   var trytes = ""

@@ -1,3 +1,5 @@
+import { trit } from "../types"
+
 export const BYTES_TO_TRITS = {}
 
 bytesToTritsLoop: for (let i = 0, trits = [0, 0, 0, 0, 0]; i < 243; ++i) {
@@ -14,7 +16,7 @@ bytesToTritsLoop: for (let i = 0, trits = [0, 0, 0, 0, 0]; i < 243; ++i) {
   }
 }
 
-export function bytesToTrits(bytes: Buffer): number[] {
+export function bytesToTrits(bytes: Buffer): trit[] {
   var i, j, v, t
 
   const size  = bytes.byteLength
