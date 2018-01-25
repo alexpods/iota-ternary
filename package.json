@@ -14,7 +14,8 @@
     "bench:trytes-to-trits": "node bench/trytes-to-trits",
     "bench:trits-to-trytes": "node bench/trits-to-trytes",
     "bench:number-to-trits": "node bench/number-to-trits",
-    "bench:trits-to-number": "node bench/trits-to-number"
+    "bench:trits-to-number": "node bench/trits-to-number",
+    "bench:trytes-to-number": "node bench/trytes-to-number"
   },
   "repository": {
     "type": "git",

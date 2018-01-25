@@ -1,9 +1,4 @@
-export const NUMBER_OF_TRITS_IN_A_BYTE = 5
-
-export const TRYTES = '9ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-export const TRITS  = [-1, 0, 1]
-
-export const TRYTES_TO_NUMBERS = {
+const TRYTES_TO_NUMBERS = {
   "9": 0,
   "A": 1,
   "B": 2,
@@ -31,4 +26,17 @@ export const TRYTES_TO_NUMBERS = {
   "X": -3,
   "Y": -2,
   "Z": -1
+}
+
+
+export function trytesToNumber(trytes: string): number {
+  var i, result
+
+  result = 0
+
+  for (i = trytes.length - 1; i >= 0; --i) {
+    result = result * 27 + TRYTES_TO_NUMBERS[trytes[i]]
+  }
+
+  return result
 }

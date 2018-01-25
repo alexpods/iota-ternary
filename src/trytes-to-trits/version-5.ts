@@ -35,7 +35,7 @@ export function trytesToTrits(trytes: string): number[] {
   const trits = new Array(size * 3)
 
   for (i = 0, j = 0; i < size; i += 1, j += 3) {
-    k = (trytes[i].charCodeAt(0) - 64)*3
+    k = (trytes.charCodeAt(i) - 64)*3
 
     if (k < 0) {
       k = 0
