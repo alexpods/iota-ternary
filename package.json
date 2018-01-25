@@ -1,6 +1,6 @@
 {
   "name": "iota-ternary",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "description": "Fast utility functions for conversion between trytes, trits and bytes",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
