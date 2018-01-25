@@ -1,8 +1,6 @@
-export {
-  TRYTES,
-  TRITS,
-  TRYTES_TO_NUMBERS,
-} from "./constants"
+export { TRYTES, TRITS } from "./constants"
+
+export { trit, tryte, trits, trytes } from "./types"
 
 export { trytesToTrits  } from "./trytes-to-trits"
 export { trytesToNumber } from "./trytes-to-number"

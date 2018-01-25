@@ -3,8 +3,7 @@ import { expect } from "chai"
 import { trytesToNumber } from "../src/trytes-to-number"
 import { numberToTrytes } from "../src/number-to-trytes"
 
-import { TRYTES_TO_NUMBERS } from "../src/constants"
-import { generateTrytes } from "./utils"
+import { generateTrytes, TRYTES_TO_NUMBERS } from "./utils"
 
 describe("trytesToNumber(trytes)", () => {
 

@@ -3,8 +3,8 @@ import { expect } from 'chai'
 import { tritsToTrytes } from '../src/trits-to-trytes'
 import { trytesToTrits } from '../src/trytes-to-trits'
 
-import { TRYTES, TRYTES_TO_NUMBERS } from '../src/constants'
-import { generateTrits, NUMBERS_TO_TRYTES } from './utils'
+import { TRYTES } from '../src/constants'
+import { generateTrits, NUMBERS_TO_TRYTES, TRYTES_TO_NUMBERS } from './utils'
 
 describe("tritsToTrytes(trits)", () => {
 
