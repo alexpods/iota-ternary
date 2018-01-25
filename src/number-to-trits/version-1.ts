@@ -1,10 +1,9 @@
 export function numberToTrits(number: number): number[] {
-  var i, j, r, n, v
+  var i, r, n, v
 
   const trits = new Array()
 
-  n = number < 0
-  v = n ? -number : number
+  v = Math.abs(number)
 
   while (v > 0) {
     r = v % 3
@@ -15,8 +14,16 @@ export function numberToTrits(number: number): number[] {
       v += 1
     }
 
-    trits.push(n ? r && -r : r)
+    trits.push(r)
   }
+
+
+  if (number < 0) {
+    for (i = 0; i < trits.length; ++i) {
+      trits[i] = trits[i] && -trits[i]
+    }
+  }
+
 
   return trits
 }

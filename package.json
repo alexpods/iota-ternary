@@ -12,7 +12,8 @@
     "bench:bytes-to-trits": "node bench/bytes-to-trits",
     "bench:trits-to-bytes": "node bench/trits-to-bytes",
     "bench:trytes-to-trits": "node bench/trytes-to-trits",
-    "bench:trits-to-trytes": "node bench/trits-to-trytes"
+    "bench:trits-to-trytes": "node bench/trits-to-trytes",
+    "bench:number-to-trits": "node bench/number-to-trits"
   },
   "repository": {
     "type": "git",

@@ -61,5 +61,5 @@ export function generateTrits(count = 273) {
 }
 
 export function generateNumber(maxNumber = Number.MAX_SAFE_INTEGER) {
-  return Math.floor(Math.random() * (maxNumber + 1))
+  return (Math.random() < 0.5 ? -1 : +1) * Math.floor(Math.random() * (maxNumber + 1))
 }

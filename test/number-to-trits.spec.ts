@@ -11,7 +11,7 @@ describe("numberToTrits(number)", () => {
   it("should convert number to trits", () => {
     const number = 3776240617938684 // generateNumber()
 
-    const trits  = numberToTrits(number)
+    const trits = numberToTrits(number)
 
     expect(trits).to.be.a("array")
 
@@ -34,7 +34,7 @@ describe("numberToTrits(number)", () => {
   })
 
   it("should convert negative values", () => {
-    const number  = generateNumber()
+    const number  = Math.abs(generateNumber())
     const trits   = numberToTrits(-number)
     const number2 = tritsToNumber(trits)
 
