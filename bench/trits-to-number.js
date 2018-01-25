@@ -1,7 +1,8 @@
 const Benchmark = require("benchmark")
 
-const tritsToBytes1 = require("../dist/trits-to-bytes/version-1").tritsToBytes
-const tritsToBytes2 = require("../dist/trits-to-bytes/version-2").tritsToBytes
+const iotaLibValue = require("iota.lib.js/lib/crypto/converter/converter").value
+
+const tritsToNumber1 = require("../dist/trits-to-number/version-1").tritsToNumber
 
 const suite = new Benchmark.Suite()
 
@@ -29,8 +30,8 @@ suite.on("start", () => {
   }
 
   for (let j = 0; j < 10000; ++j) {
-    tritsToBytes1(trits[j % TIRTS_COUNT])
-    tritsToBytes2(trits[j % TIRTS_COUNT])
+    iotaLibValue(trits[j % TIRTS_COUNT])
+    tritsToNumber1(trits[j % TIRTS_COUNT])
   }
 })
 
@@ -38,12 +39,12 @@ suite.on("cycle", () => {
   i = 0
 })
 
-suite.add("trits-to-bytes-1", () => {
-  const bytes = tritsToBytes1(trits[++i % TIRTS_COUNT])
+suite.add("iota.lib.js: value()", () => {
+  const bytes = iotaLibValue(trits[++i % TIRTS_COUNT])
 })
 
-suite.add("trits-to-bytes-2", () => {
-  const bytes = tritsToBytes2(trits[++i % TIRTS_COUNT])
+suite.add("trits-to-bytes-1", () => {
+  const bytes = tritsToNumber1(trits[++i % TIRTS_COUNT])
 })
 
 suite.on('complete', function () {

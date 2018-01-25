@@ -35,6 +35,10 @@ suite.on("start", () => {
   }
 })
 
+suite.on("cycle", () => {
+  i = 0
+})
+
 suite.add("bytes-to-trits-1", () => {
   const trits = bytesToTrits1(buffers[++i % BUFFER_COUNT])
 })

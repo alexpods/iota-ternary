@@ -34,7 +34,6 @@ suite.on("cycle", () => {
   i = 0
 })
 
-
 suite.add("iota.lib.js: trits()", () => {
   const trits = iotaLibTrits(numbers[++i % NUMBERS_COUNT])
 })
